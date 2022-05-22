@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.Switch;
+import android.widget.TextView;
 
 import com.mobile.depressiontest.R;
 import com.mobile.depressiontest.models.Choices;
@@ -15,6 +16,7 @@ import com.mobile.depressiontest.models.ScoreInterface;
 
 public class DepressionTestActivity extends AppCompatActivity implements ScoreInterface, ResultInterface {
 
+    TextView tvPage;
     Button buttonChoice1, buttonChoice2, buttonChoice3, buttonChoice4;
 
     Choices choices = new Choices();
@@ -58,6 +60,9 @@ public class DepressionTestActivity extends AppCompatActivity implements ScoreIn
         buttonChoice2.setText(choices.getChoice2());
         buttonChoice3.setText(choices.getChoice3());
         buttonChoice4.setText(choices.getChoice4());
+
+        tvPage = findViewById(R.id.tvPage);
+        tvPage.setText(choices.getPageCount());
     }
 
     @Override
@@ -96,5 +101,6 @@ public class DepressionTestActivity extends AppCompatActivity implements ScoreIn
         buttonChoice2.setText(choices.getChoice2());
         buttonChoice3.setText(choices.getChoice3());
         buttonChoice4.setText(choices.getChoice4());
+        tvPage.setText(choices.getPageCount());
     }
 }

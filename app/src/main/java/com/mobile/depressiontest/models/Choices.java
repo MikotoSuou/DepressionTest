@@ -20,6 +20,10 @@ public class Choices {
         return questionList.length;
     }
 
+    public String getPageCount() {
+        return (indexCount + 1) + " / "  + questionList.length;
+    }
+
     public String getChoice1() {
         return questionList[indexCount][0];
     }

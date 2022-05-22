@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:gravity="center"
-    tools:context=".MainActivity">
+    tools:context=".activities.MainActivity">
 
     <TextView
         android:layout_width="match_parent"
@@ -22,11 +22,25 @@
         android:id="@+id/btnStart"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:minWidth="@dimen/size_170"
         android:background="@drawable/bg_button_start"
         android:textColor="@color/white"
         android:padding="@dimen/size_20"
-        android:textStyle="bold"
         android:text="@string/start_test"
+        android:fontFamily="@font/gt_walsheim_medium"
+        android:textSize="@dimen/font_16"/>
+
+    <Button
+        android:id="@+id/btnHistory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minWidth="@dimen/size_170"
+        android:background="@drawable/bg_button3_design"
+        android:textColor="@color/white"
+        android:padding="@dimen/size_20"
+        android:layout_marginTop="@dimen/size_16"
+        android:text="@string/history"
+        android:fontFamily="@font/gt_walsheim_medium"
         android:textSize="@dimen/font_16"/>
 
 </LinearLayout>
