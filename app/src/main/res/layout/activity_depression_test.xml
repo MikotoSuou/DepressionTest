@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorAccent"
     tools:context=".activities.DepressionTestActivity">
 
     <LinearLayout
@@ -23,6 +24,7 @@
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@color/purple_200"
             android:text="@string/choice1"
             android:layout_marginHorizontal="@dimen/size_16"
             android:layout_marginTop="@dimen/size_16"/>
@@ -30,6 +32,7 @@
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@color/purple_200"
             android:text="@string/choice2"
             android:layout_marginHorizontal="@dimen/size_16"
             android:layout_marginTop="@dimen/size_10"/>
@@ -37,12 +40,14 @@
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@color/purple_200"
             android:text="@string/choice3"
             android:layout_marginHorizontal="@dimen/size_16"
             android:layout_marginTop="@dimen/size_10"/>
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@color/purple_200"
             android:text="@string/choice4"
             android:layout_marginHorizontal="@dimen/size_16"
             android:layout_marginTop="@dimen/size_10"/>
