@@ -4,7 +4,7 @@ import com.mobile.depressiontest.global.Constants;
 
 public class Choices {
 
-    private String questionList[][] = Constants.QUESTIONS_LIST;
+    private final String[][] questionList = Constants.QUESTIONS_LIST;
 
     private int indexCount = 0;
 

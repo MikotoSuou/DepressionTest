@@ -13,11 +13,11 @@ public class ResultActivity extends AppCompatActivity implements ResultInterface
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_result);
-
+        displayValues();
     }
 
     @Override
-    public void displayResult() {
+    public void displayValues() {
         int score = getIntent().getExtras().getInt("score");
         if (score != 0 && score <= 10)
         {
