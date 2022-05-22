@@ -4,14 +4,17 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Button;
+import android.widget.Switch;
 
 import com.mobile.depressiontest.R;
 import com.mobile.depressiontest.models.Choices;
+import com.mobile.depressiontest.models.Score;
+import com.mobile.depressiontest.models.ScoreInterface;
 
-public class DepressionTestActivity extends AppCompatActivity {
+public class DepressionTestActivity extends AppCompatActivity implements ScoreInterface {
     Button buttonChoice1, buttonChoice2, buttonChoice3, buttonChoice4;
+    Score score = new Score();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,6 +33,7 @@ public class DepressionTestActivity extends AppCompatActivity {
         buttonChoice4.setText(choices.getChoice4());
 
         buttonChoice1.setOnClickListener(v -> {
+            calculateScore(0);
             if (choices.getIndexCount() == choices.getQuestionListSize() - 1){
                 startActivity(new Intent(getApplicationContext(), ResultActivity.class));
                 return;
@@ -42,6 +46,7 @@ public class DepressionTestActivity extends AppCompatActivity {
         });
 
         buttonChoice2.setOnClickListener(v -> {
+            calculateScore(1);
             if (choices.getIndexCount() == choices.getQuestionListSize() - 1){
                 startActivity(new Intent(getApplicationContext(), ResultActivity.class));
                 return;
@@ -54,6 +59,7 @@ public class DepressionTestActivity extends AppCompatActivity {
         });
 
         buttonChoice3.setOnClickListener(v -> {
+            calculateScore(2);
             if (choices.getIndexCount() == choices.getQuestionListSize() - 1){
                 startActivity(new Intent(getApplicationContext(), ResultActivity.class));
                 return;
@@ -66,6 +72,7 @@ public class DepressionTestActivity extends AppCompatActivity {
         });
 
         buttonChoice4.setOnClickListener(v -> {
+            calculateScore(3);
             if (choices.getIndexCount() == choices.getQuestionListSize() - 1){
                 startActivity(new Intent(getApplicationContext(), ResultActivity.class));
                 return;
@@ -78,4 +85,19 @@ public class DepressionTestActivity extends AppCompatActivity {
         });
     }
 
+
+    @Override
+    public void calculateScore(int btnID) {
+        switch (btnID){
+            case 0 : score.addZero();
+                    break;
+            case 1 : score.addOne();
+                    break;
+            case 2 : score.addTwo();
+                    break;
+            case 3 : score.addThree();
+                    break;
+        }
+        
+    }
 }
