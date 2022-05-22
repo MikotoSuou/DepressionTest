@@ -1,7 +1,7 @@
 package com.mobile.depressiontest.global;
 
 public class Constants {
-    private static String QUESTIONS_LIST[][] = {
+    public static final String QUESTIONS_LIST[][] = {
             {"I do not feel sad. ", "I feel sad","I am sad all the time and I can't snap out of it. ",
                     "I am so sad and unhappy that I can't stand it."},
             {"I am not particularly discouraged about the future. ", "I feel discouraged about the future. ",

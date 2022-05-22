@@ -1,11 +1,10 @@
 package com.mobile.depressiontest.models;
 
+import com.mobile.depressiontest.global.Constants;
+
 public class Choices {
 
-    private String questionList[][] = {
-            {"I do not feel sad", "I feel sad ", "I am sad all the time and I can't snap out of it", "I am so sad and unhappy that I can't stand it. "},
-            {"I am not particularly discouraged about the future. ", "I feel discouraged about the future. ", "I feel discouraged about the future. ", "I feel discouraged about the future. "}
-    };
+    private String questionList[][] = Constants.QUESTIONS_LIST;
 
     private int indexCount = 0;
 
