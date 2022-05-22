@@ -22,6 +22,7 @@
             android:textSize="@dimen/font_25"/>
 
         <Button
+            android:id="@+id/btnChoice1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/purple_200"
@@ -30,6 +31,7 @@
             android:layout_marginTop="@dimen/size_16"/>
 
         <Button
+            android:id="@+id/btnChoice2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/purple_200"
@@ -38,13 +40,16 @@
             android:layout_marginTop="@dimen/size_10"/>
 
         <Button
+            android:id="@+id/btnChoice3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/purple_200"
             android:text="@string/choice3"
             android:layout_marginHorizontal="@dimen/size_16"
             android:layout_marginTop="@dimen/size_10"/>
+
         <Button
+            android:id="@+id/btnChoice4"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/purple_200"
