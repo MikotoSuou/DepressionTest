@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">DepressionTest</string>
+    <string name="app_name">Depression Test</string>
     <string name="in_the_last_2_weeks">In the last two weeks how do you feel…</string>
     <string name="choice1">choice 1</string>
     <string name="choice2">choice 2</string>
