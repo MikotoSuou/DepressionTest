@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorAccent"
     tools:context=".activities.DepressionTestActivity">
 
     <LinearLayout
@@ -25,7 +24,7 @@
             android:id="@+id/btnChoice1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/purple_200"
+            android:background="@drawable/bg_button1_design"
             android:text="@string/choice1"
             android:layout_marginHorizontal="@dimen/size_16"
             android:layout_marginTop="@dimen/size_16"/>
@@ -34,7 +33,7 @@
             android:id="@+id/btnChoice2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/purple_200"
+            android:background="@drawable/bg_button2_design"
             android:text="@string/choice2"
             android:layout_marginHorizontal="@dimen/size_16"
             android:layout_marginTop="@dimen/size_10"/>
@@ -43,7 +42,7 @@
             android:id="@+id/btnChoice3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/purple_200"
+            android:background="@drawable/bg_button3_design"
             android:text="@string/choice3"
             android:layout_marginHorizontal="@dimen/size_16"
             android:layout_marginTop="@dimen/size_10"/>
@@ -52,7 +51,7 @@
             android:id="@+id/btnChoice4"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/purple_200"
+            android:background="@drawable/bg_button4_design"
             android:text="@string/choice4"
             android:layout_marginHorizontal="@dimen/size_16"
             android:layout_marginTop="@dimen/size_10"/>
