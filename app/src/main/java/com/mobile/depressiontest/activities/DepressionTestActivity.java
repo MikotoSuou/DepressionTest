@@ -35,7 +35,10 @@ public class DepressionTestActivity extends AppCompatActivity implements ScoreIn
         buttonChoice1.setOnClickListener(v -> {
             calculateScore(0);
             if (choices.getIndexCount() == choices.getQuestionListSize() - 1){
-                startActivity(new Intent(getApplicationContext(), ResultActivity.class));
+                Intent intent = new Intent(getApplicationContext(), ResultActivity.class);
+                intent.putExtra("score", score.getScore());
+                startActivity(intent);
+                finish();
                 return;
             }
             choices.incrementCount();
@@ -48,7 +51,10 @@ public class DepressionTestActivity extends AppCompatActivity implements ScoreIn
         buttonChoice2.setOnClickListener(v -> {
             calculateScore(1);
             if (choices.getIndexCount() == choices.getQuestionListSize() - 1){
-                startActivity(new Intent(getApplicationContext(), ResultActivity.class));
+                Intent intent = new Intent(getApplicationContext(), ResultActivity.class);
+                intent.putExtra("score", score.getScore());
+                startActivity(intent);
+                finish();
                 return;
             }
             choices.incrementCount();
@@ -61,7 +67,10 @@ public class DepressionTestActivity extends AppCompatActivity implements ScoreIn
         buttonChoice3.setOnClickListener(v -> {
             calculateScore(2);
             if (choices.getIndexCount() == choices.getQuestionListSize() - 1){
-                startActivity(new Intent(getApplicationContext(), ResultActivity.class));
+                Intent intent = new Intent(getApplicationContext(), ResultActivity.class);
+                intent.putExtra("score", score.getScore());
+                startActivity(intent);
+                finish();
                 return;
             }
             choices.incrementCount();
@@ -74,7 +83,10 @@ public class DepressionTestActivity extends AppCompatActivity implements ScoreIn
         buttonChoice4.setOnClickListener(v -> {
             calculateScore(3);
             if (choices.getIndexCount() == choices.getQuestionListSize() - 1){
-                startActivity(new Intent(getApplicationContext(), ResultActivity.class));
+                Intent intent = new Intent(getApplicationContext(), ResultActivity.class);
+                intent.putExtra("score", score.getScore());
+                startActivity(intent);
+                finish();
                 return;
             }
             choices.incrementCount();
@@ -89,15 +101,19 @@ public class DepressionTestActivity extends AppCompatActivity implements ScoreIn
     @Override
     public void calculateScore(int btnID) {
         switch (btnID){
-            case 0 : score.addZero();
-                    break;
-            case 1 : score.addOne();
-                    break;
-            case 2 : score.addTwo();
-                    break;
-            case 3 : score.addThree();
-                    break;
+            case 0 : score.setScore(score.getScore());
+                     score.addZero();
+                     break;
+            case 1 : score.setScore(score.getScore());
+                     score.addOne();
+                     break;
+            case 2 : score.setScore(score.getScore());
+                     score.addTwo();
+                     break;
+            case 3 : score.setScore(score.getScore());
+                     score.addThree();
+                     break;
         }
-        
+
     }
 }

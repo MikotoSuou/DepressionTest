@@ -1,7 +1,7 @@
 package com.mobile.depressiontest.models;
 
 public class Score {
-    private static int score = 0;
+    private int score = 0;
 
 
     public void addZero(){
@@ -17,11 +17,11 @@ public class Score {
         score += 3;
     }
 
-    public static void setScore(int score) {
-        Score.score = score;
+    public int getScore() {
+        return score;
     }
 
-    public static int getScore() {
-        return score;
+    public void setScore(int score) {
+        this.score = score;
     }
 }
