@@ -47,4 +47,13 @@ public class Constants {
             {"I have not noticed any recent change in my interest in sex.", "I am less interested in sex than I used to be.",
                     "I have almost no interest in sex.", "I have lost interest in sex completely."},
     };
+
+    public static final String NOT_DEPRESSED = "Does not show sign of depression";
+    public static final String NORMAL = "These ups and downs are considered normal";
+    public static final String MILD_MOOD_DISTURBANCE = "Mild mood disturbance";
+    public static final String BORDERLINE_DEPRESSION = "Borderline clinical depression";
+    public static final String MODERATE_DEPRESSION = "Moderate depression";
+    public static final String SEVERE_DEPRESSION = "Severe depression";
+    public static final String Extreme_DEPRESSION = "Extreme depression";
+
 }
