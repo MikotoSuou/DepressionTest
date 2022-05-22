@@ -2,6 +2,7 @@ package com.mobile.depressiontest.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -29,6 +30,10 @@ public class DepressionTestActivity extends AppCompatActivity {
         buttonChoice4.setText(choices.getChoice4());
 
         buttonChoice1.setOnClickListener(v -> {
+            if (choices.getIndexCount() == choices.getQuestionListSize() - 1){
+                startActivity(new Intent(getApplicationContext(), ResultActivity.class));
+                return;
+            }
             choices.incrementCount();
             buttonChoice1.setText(choices.getChoice1());
             buttonChoice2.setText(choices.getChoice2());
@@ -37,6 +42,10 @@ public class DepressionTestActivity extends AppCompatActivity {
         });
 
         buttonChoice2.setOnClickListener(v -> {
+            if (choices.getIndexCount() == choices.getQuestionListSize() - 1){
+                startActivity(new Intent(getApplicationContext(), ResultActivity.class));
+                return;
+            }
             choices.incrementCount();
             buttonChoice1.setText(choices.getChoice1());
             buttonChoice2.setText(choices.getChoice2());
@@ -45,6 +54,10 @@ public class DepressionTestActivity extends AppCompatActivity {
         });
 
         buttonChoice3.setOnClickListener(v -> {
+            if (choices.getIndexCount() == choices.getQuestionListSize() - 1){
+                startActivity(new Intent(getApplicationContext(), ResultActivity.class));
+                return;
+            }
             choices.incrementCount();
             buttonChoice1.setText(choices.getChoice1());
             buttonChoice2.setText(choices.getChoice2());
@@ -53,6 +66,10 @@ public class DepressionTestActivity extends AppCompatActivity {
         });
 
         buttonChoice4.setOnClickListener(v -> {
+            if (choices.getIndexCount() == choices.getQuestionListSize() - 1){
+                startActivity(new Intent(getApplicationContext(), ResultActivity.class));
+                return;
+            }
             choices.incrementCount();
             buttonChoice1.setText(choices.getChoice1());
             buttonChoice2.setText(choices.getChoice2());

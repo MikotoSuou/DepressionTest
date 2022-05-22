@@ -16,6 +16,10 @@ public class Choices {
         return indexCount;
     }
 
+    public int getQuestionListSize(){
+        return questionList.length;
+    }
+
     public String getChoice1() {
         return questionList[indexCount][0];
     }
@@ -31,4 +35,5 @@ public class Choices {
     public String getChoice4() {
         return questionList[indexCount][3];
     }
+
 }
