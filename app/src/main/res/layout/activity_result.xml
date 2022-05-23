@@ -24,7 +24,19 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="YOUR RESULT SUGGESTS:"
+            android:text="YOUR TEST RESULT SUGGESTS:"
+            android:layout_gravity="center"
+            android:textSize="20sp"
+            android:fontFamily="@font/gt_walsheim_black"
+            android:textColor="@color/black"
+            android:layout_marginTop="@dimen/size_25"
+            >
+        </TextView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="YOU HAVE ______:"
             android:layout_gravity="center"
             android:textSize="20sp"
             android:fontFamily="@font/gt_walsheim_black"
