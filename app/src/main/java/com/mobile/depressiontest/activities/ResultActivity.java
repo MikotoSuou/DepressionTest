@@ -4,6 +4,9 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.TextView;
 
 import com.mobile.depressiontest.R;
 import com.mobile.depressiontest.global.Constants;
@@ -23,43 +26,52 @@ public class ResultActivity extends AppCompatActivity implements ResultInterface
     public static final String DATE_FORMAT = "yyyy-MM-dd";
     private static final String TIME_FORMAT = "HH:mm:ss";
 
+    Button btnRetakeTest, btnHomeScreen;
+    TextView tvResults;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_result);
         displayValues();
         saveResult();
+        btnHomeScreen = findViewById(R.id.btnHomeScreen);
+
+        btnHomeScreen.setOnClickListener(v -> finish());
     }
 
     @Override
     public void displayValues() {
+
+        tvResults = findViewById(R.id.tvResults);
+
         int score = getIntent().getExtras().getInt("score");
         if (score != 0 && score <= 10)
         {
-            System.out.println("\nThese ups and downs are considered normal");
+            tvResults.setText(Constants.NORMAL);
         }
         else if (score >= 11 && score <= 16)
         {
-            System.out.println("\nMild mood disturbance");
+            tvResults.setText(Constants.MILD_MOOD_DISTURBANCE);
         }
         else if (score >= 17 && score <= 20)
         {
-            System.out.println("\nBorderline clinical depression");
+            tvResults.setText(Constants.BORDERLINE_DEPRESSION);
         }
         else if (score >= 21 && score <= 30)
         {
-            System.out.println("\nModerate depression");
+            tvResults.setText(Constants.MODERATE_DEPRESSION);
         }
         else if (score >= 31 && score <= 40)
         {
-            System.out.println("\nSevere depression");
+            tvResults.setText(Constants.SEVERE_DEPRESSION);
         }
         else if (score >= 40)
         {
-            System.out.println("\nExtreme depression");
+            tvResults.setText(Constants.Extreme_DEPRESSION);
         }
         else {
-            System.out.println("\nNot Depressed - .0");
+            tvResults.setText(Constants.NOT_DEPRESSED);
         }
     }
 

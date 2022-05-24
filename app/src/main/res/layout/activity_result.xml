@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,74 +7,60 @@
     android:orientation="vertical"
     android:background="@color/colorAccent"
     android:padding="@dimen/size_30"
-    tools:context=".activities.ResultActivity">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@drawable/ic__652398482writing_svgrepo_com"
-            android:text=""
-            android:layout_gravity="center"
-            android:textSize="30sp"
-            android:textColor="@color/fuchsia"
-            android:fontFamily="@font/gt_walsheim_black"
-            >
-        </TextView>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="YOUR TEST RESULT SUGGESTS:"
-            android:layout_gravity="center"
-            android:textSize="20sp"
-            android:fontFamily="@font/gt_walsheim_black"
-            android:textColor="@color/black"
-            android:layout_marginTop="@dimen/size_25"
-            >
-        </TextView>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="YOU HAVE ______:"
-            android:layout_gravity="center"
-            android:textSize="20sp"
-            android:fontFamily="@font/gt_walsheim_black"
-            android:textColor="@color/black"
-            android:layout_marginTop="@dimen/size_25"
-            >
-        </TextView>
-
+    tools:context=".activities.ResultActivity"
+    >
         <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/ic__652398482writing_svgrepo_com"
+                    android:text=""
+                    android:layout_gravity="center"
+                    android:textSize="30sp"
+                    android:textColor="@color/fuchsia"
+                    android:fontFamily="@font/gt_walsheim_black"
+                    >
+                </TextView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="YOUR TEST RESULT SUGGESTS:"
+                    android:layout_gravity="center"
+                    android:textSize="20sp"
+                    android:fontFamily="@font/gt_walsheim_black"
+                    android:textColor="@color/black"
+                    android:layout_marginTop="@dimen/size_25"
+                    />
+
+                <TextView
+                    android:id="@+id/tvResults"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:textSize="20sp"
+                    android:fontFamily="@font/gt_walsheim_black"
+                    android:textColor="@color/black"
+                    android:layout_marginTop="@dimen/size_25"
+                    />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnHomeScreen"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_gravity="center"
-            android:layout_marginTop="300dp"
-            >
-                <Button
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Retake Test"
-                    android:minWidth="@dimen/size_170"
-                    android:background="@drawable/bg_button_start"
-                    android:textColor="@color/white"
-                    android:padding="@dimen/size_20"
-                    android:layout_gravity="center"
-                    android:fontFamily="@font/gt_walsheim_medium"
-                    android:textSize="@dimen/font_16">
-                </Button>
-
-                <Button
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text=" Home Screen"
-                    android:minWidth="@dimen/size_170"
-                    android:background="@drawable/bg_button3_design"
-                    android:textColor="@color/white"
-                    android:padding="@dimen/size_20"
-                    android:fontFamily="@font/gt_walsheim_medium"
-                    android:textSize="@dimen/font_16">
-                </Button>
-        </LinearLayout>
-</LinearLayout>
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:text=" Home Screen"
+            android:background="@drawable/bg_button3_design"
+            android:textColor="@color/white"
+            android:padding="@dimen/size_20"
+            android:fontFamily="@font/gt_walsheim_medium"
+            android:textSize="@dimen/font_16">
+        </Button>
+</RelativeLayout>

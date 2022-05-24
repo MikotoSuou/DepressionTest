@@ -29,6 +29,8 @@ public class DepressionTestActivity extends AppCompatActivity implements ScoreIn
 
         initViews();
 
+
+
         buttonChoice1.setOnClickListener(v -> {
             calculateScore(0);
             displayValues();
@@ -63,6 +65,7 @@ public class DepressionTestActivity extends AppCompatActivity implements ScoreIn
 
         tvPage = findViewById(R.id.tvPage);
         tvPage.setText(choices.getPageCount());
+
     }
 
     @Override
