@@ -31,19 +31,7 @@ public class MainActivity extends AppCompatActivity {
         btnStart.setOnClickListener(v -> startActivity(new Intent(getApplicationContext(), DepressionTestActivity.class)));
 
         btnHistory.setOnClickListener(v -> {
-//            Util.setObjectList(getApplicationContext(), dummyList());
             startActivity(new Intent(getApplicationContext(), HistoryActivity.class));
         });
-    }
-
-    private List<History> dummyList() {
-        ArrayList<History> list = new ArrayList<>();
-        list.add(new History("9", "depressed", "10/12/12", "10:20 PM"));
-        list.add(new History("9", "depressed", "10/12/12", "10:20 PM"));
-        list.add(new History("9", "depressed", "10/12/12", "10:20 PM"));
-        list.add(new History("9", "depressed", "10/12/12", "10:20 PM"));
-        list.add(new History("9", "depressed", "10/12/12", "10:20 PM"));
-        list.add(new History("9", "depressed", "10/12/12", "10:20 PM"));
-        return list;
     }
 }

@@ -28,9 +28,7 @@ public class DepressionTestActivity extends AppCompatActivity implements ScoreIn
         setContentView(R.layout.activity_depression_test);
 
         initViews();
-
-
-
+        
         buttonChoice1.setOnClickListener(v -> {
             calculateScore(0);
             displayValues();
